@@ -1,12 +1,15 @@
 package views.graphics;
 
+import controllers.PlayController;
+import controllers.ResumeController;
+import controllers.StartController;
 import models.Game;
 import views.View;
 
 public class GraphicsView extends View {
 
-    public GraphicsView(Game game) {
-        super(game);
+    public GraphicsView(StartController startController, PlayController playController, ResumeController resumeController) {
+        super(startController, playController, resumeController);
     }
 
     public void interact() {

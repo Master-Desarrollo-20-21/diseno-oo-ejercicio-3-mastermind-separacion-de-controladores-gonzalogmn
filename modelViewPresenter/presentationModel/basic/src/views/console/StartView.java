@@ -1,12 +1,14 @@
 package views.console;
 
+import controllers.StartController;
 import models.Game;
 import views.Message;
-import views.WithGameView;
 
-public class StartView extends WithGameView {
-    public StartView(Game game) {
-        super(game);
+public class StartView {
+    private final StartController startController;
+
+    public StartView(StartController startController) {
+        this.startController = startController;
     }
 
     public void interact() {

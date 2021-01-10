@@ -1,5 +1,8 @@
 package views.console;
 
+import controllers.PlayController;
+import controllers.ResumeController;
+import controllers.StartController;
 import models.Game;
 import views.View;
 
@@ -8,11 +11,11 @@ public class ConsoleView extends View {
     private PlayView playView;
     private ResumeView resumeView;
 
-    public ConsoleView(Game game) {
-        super(game);
-        this.startView = new StartView(game);
-        this.playView = new PlayView(game);
-        this.resumeView = new ResumeView(game);
+    public ConsoleView(StartController startController, PlayController playController, ResumeController resumeController) {
+        super(startController, playController, resumeController);
+        this.startView = new StartView(startController);
+        this.playView = new PlayView(playController);
+        this.resumeView = new ResumeView(resumeController);
     }
 
     public void interact() {

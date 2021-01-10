@@ -1,13 +1,15 @@
 package views.console;
 
+import controllers.ResumeController;
 import models.Game;
 import utils.YesNoDialog;
 import views.Message;
-import views.WithGameView;
 
-public class ResumeView extends WithGameView {
-    public ResumeView(Game game) {
-        super(game);
+public class ResumeView {
+    private final ResumeController resumeController;
+
+    public ResumeView(ResumeController resumeController) {
+        this.resumeController = resumeController;
     }
 
     public boolean interact() {

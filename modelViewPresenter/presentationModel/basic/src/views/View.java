@@ -1,14 +1,23 @@
 package views;
 
+import controllers.PlayController;
+import controllers.ResumeController;
+import controllers.StartController;
 import models.Game;
 import views.console.PlayView;
 import views.console.ResumeView;
 import views.console.StartView;
 
-public abstract class View extends WithGameView {
+public abstract class View {
 
-    public View(Game game) {
-        super(game);
+    protected StartController startController;
+    protected PlayController playController;
+    protected ResumeController resumeController;
+
+    public View(StartController startController, PlayController playController, ResumeController resumeController) {
+        this.startController = startController;
+        this.playController = playController;
+        this.resumeController = resumeController;
     }
 
     public abstract void interact();
